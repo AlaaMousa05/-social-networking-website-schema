@@ -131,13 +131,15 @@ RIGHT OUTER JOIN
     Friends ON Users.login = Friends.friend;
 
 -- 3- Full Outer Join:
-SELECT 
-    Users.login AS UserLogin,
-    Friends.friend AS Friend
-FROM 
-    Users
-FULL OUTER JOIN 
-    Friends ON Users.login = Friends.userr;
+SELECT  
+    U.login AS UserLogin, 
+    U.firstName,  
+    U.lastName,
+    F.friend AS Friend,
+    F.sinceDate
+FROM   
+    Users U FULL OUTER JOIN    Friends F ON Users.login = Friends.userr;
+
 
 
 -- Q4 SQL to retrieve the names of users who have posted comments on entries made by their friends. Use a subquery to identify the entries created by each user's frinds
