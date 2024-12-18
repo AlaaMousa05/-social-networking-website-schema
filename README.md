@@ -1,4 +1,5 @@
 # -social-networking-website-schema 📊🚀 .
+![image](https://github.com/user-attachments/assets/707739bc-926e-404c-8bce-b4e90a49c1e5)
 
 ## Introduction to the Database Schema 🎯
 Welcome to an innovative database schema that encapsulates a vibrant social network, designed with modern features to connect users, foster interactions, and manage multimedia content efficiently. This database lays the foundation for a platform that combines user management, content sharing, and social networking dynamics in one cohesive structure.
