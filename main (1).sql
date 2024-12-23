@@ -106,7 +106,7 @@ VALUES
 (4, 'Nour shares tech tips!');
 
 INSERT INTO Friends (userr, friend, sinceDate) VALUES
-('adnan99', 'nour321', '2024-01-01'),
+('nour321', 'adnan99', '2024-01-01'),
 ('Yazeed33', 'khaled789', '2024-01-02'),
 ('khaled789', 'adnan99', '2024-01-03'),
 ('nour321', 'Yazeed33', '2024-01-04');
@@ -144,18 +144,15 @@ FROM
 
 -- Q4 SQL to retrieve the names of users who have posted comments on entries made by their friends. Use a subquery to identify the entries created by each user's frinds
 
-SELECT 
-    F.userr AS UserName,   
-    E.userr AS FriendName,  
-    C.text AS CommentText   
-FROM 
-    Comments C
-JOIN 
-    Entries E ON C.parentEntry = E.entryId   
-JOIN 
-    Friends F ON E.userr = F.friend         
-WHERE 
-    F.userr != F.friend;    
+SELECT
+    u.userr AS UserName,
+    f.friend AS FriendName,
+    t.text AS CommentText
+FROM Friends f
+JOIN Entries e ON f.friend = e.userr  
+JOIN Comments t ON e.entryId= t.parentEntry 
+JOIN Entries u ON t.entry = u.entryId
+WHERE  u.userr = f.userr;
     
 -- Q5  SQL query to display the users and the number of friends for each user. 
 
