@@ -1,4 +1,4 @@
-# -social-networking-website-schema 📊🚀 .
+# social networking website schema 📊🚀 .
 ![image](https://github.com/user-attachments/assets/707739bc-926e-404c-8bce-b4e90a49c1e5)
 
 ## Introduction to the Database Schema 🎯
